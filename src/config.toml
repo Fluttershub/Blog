@@ -1,0 +1,63 @@
+baseURL = "https://blog.fluttershub.com/"
+theme = "m10c"
+languageCode = "en-us"
+title = "Phoenix's Personal Blog"
+homepage = "https://fluttershub.com"
+tags = ["blog","personal","coding"]
+
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 2
+  # [[menu.main]]
+  #   identifier = "about"
+  #   name = "About Me"
+  #   url = "/about/"
+  #   weight = 3
+
+[params]
+    author = "Phoenix"
+    description="Land of random projects i do."
+    menu_item_separator = " | "
+    noreadingtime = true
+    [[params.social]]
+        icon = "github"
+        name = "Github"
+        url = "https://github.com/HotaruBlaze"
+    [[params.social]]
+        icon = "twitter"
+        name = "Twitter"
+        url = "https://twitter.com/hotarublaze"
+    # [style]
+    # darkestColor = "#d35050"
+    # darkColor = "#212121"
+    # lightColor = "#f5e3e0"
+    # lightestColor = "#f5f5f5"
+    # primaryColor = "#e12f"
+
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineAnchors = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "dracula"
+    tabWidth = 1
+    
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 3
