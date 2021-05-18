@@ -14,5 +14,5 @@ LABEL traefik.enable=true
 
 EXPOSE 80
 RUN rm -Rf /usr/share/nginx/html/ && rm /etc/nginx/conf.d/default.conf
-COPY ./build /usr/share/nginx/html/
+COPY ./src/build /usr/share/nginx/html/
 CMD [ "nginx", "-g", "daemon off;" ]
