@@ -6,10 +6,10 @@ COPY docker/nginx.conf /etc/nginx/nginx.conf
 COPY docker/web.conf /etc/nginx/conf.d/web.conf
 
 LABEL com.ouroboros.enable="true"
-LABEL traefik.http.routers.fluttershub-com.tls=true
-LABEL traefik.http.routers.fluttershub-com.rule=Host(`blog.fluttershub.com`)
-LABEL traefik.http.routers.fluttershub-com.tls.certresolver=letsencrypt
-LABEL traefik.http.services.fluttershub-com.loadbalancer.server.port=80
+LABEL traefik.http.routers.blog-fluttershub-com.tls=true
+LABEL traefik.http.routers.blog-fluttershub-com.rule=Host(`blog.fluttershub.com`)
+LABEL traefik.http.routers.blog-fluttershub-com.tls.certresolver=letsencrypt
+LABEL traefik.http.services.blog-fluttershub-com.loadbalancer.server.port=80
 LABEL traefik.enable=true
 
 EXPOSE 80
