@@ -1,6 +1,4 @@
-FROM node:14.15.3-alpine AS base
-
-FROM nginx:1.19.6-alpine as Web
+FROM nginx:1.19.6-alpine as web
 LABEL maintainer="Phoenix (https://github.com/HotaruBlaze)"
 COPY docker/nginx.conf /etc/nginx/nginx.conf
 COPY docker/web.conf /etc/nginx/conf.d/web.conf
