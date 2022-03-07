@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  blog.fluttershub.com:
+    image: ghcr.io/fluttershub/blog:arm64-latest
+    restart: always
+    networks:
+      - external
+    container_name: blog.fluttershub.com
+    labels:
+      - "traefik.enable=true"
+networks:
+  external:
+    external: true
