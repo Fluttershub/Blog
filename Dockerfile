@@ -1,3 +1,8 @@
+FROM jakejarvis/hugo-extended:0.105.0 as Builder
+COPY src/ /app
+WORKDIR /app
+RUN /usr/bin/hugo --minify
+
 FROM nginx:1.19.6-alpine as web
 LABEL maintainer="Phoenix (https://github.com/HotaruBlaze)"
 COPY docker/nginx.conf /etc/nginx/nginx.conf
@@ -12,5 +17,5 @@ LABEL traefik.enable=true
 
 EXPOSE 80
 RUN rm -Rf /usr/share/nginx/html/ && rm /etc/nginx/conf.d/default.conf
-COPY ./src/build /usr/share/nginx/html/
+COPY --from=Builder /app/public /usr/share/nginx/html/
 CMD [ "nginx", "-g", "daemon off;" ]
