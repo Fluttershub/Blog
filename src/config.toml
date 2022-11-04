@@ -5,6 +5,8 @@ title = "Phoenix's Personal Blog"
 homepage = "https://fluttershub.com"
 tags = ["blog","personal","coding"]
 
+[markup.goldmark.renderer]
+hardWraps = true
 
 [menu]
   [[menu.main]]
@@ -53,7 +55,7 @@ tags = ["blog","personal","coding"]
     lineNoStart = 1
     lineNos = false
     lineNumbersInTable = true
-    noClasses = true
+    noClasses = false
     style = "dracula"
     tabWidth = 1
     
