@@ -1,8 +1,9 @@
 +++
-title = "Windows 10 KVM Single-GPU Passthrough"
+title = "Windows 10 KVM Single-GPU Passthrough (Outdated)"
 tags = ["virtualization","kvm","windows","linux"]
 date = "2020-05-18"
 +++
+## This guide is outdated and ended up being incomplete.
 ## Note: This is here as notes and shouldn't be taken as a direct guide.
 
 # Table of Contents
