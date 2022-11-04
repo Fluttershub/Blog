@@ -108,23 +108,3 @@ gpg --armor --export $masterKey > gpg-pub.asc
 ```ps
 gpg --keyserver keys.openpgp.org --send-key $masterKey  
 ```
-
-### Optional 2: Force touch on Yubikey actions.
-```ps
-ykman openpgp set-touch aut on
-ykman openpgp set-touch sig on
-ykman openpgp set-touch enc on
-```
-
-
-Note: To fully reset GPG Keys on the Yubikey, do the following:
-```
-ykman openpgp reset
-```
-
-Default Pin: 123456
-Default Admin Pin: 12345678
-
-gpg --card-edit
->admin
->name
