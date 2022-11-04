@@ -95,7 +95,7 @@ git config --global --unset gpg.format
 git config --global gpg.program "C:\Program Files (x86)\GnuPG\bin\gpg.exe"
 gpg --list-secret-keys --keyid-format=long
     > Select the ssb key with [S]
-    > type: git config --global user.signingkey E5148A9E88F8A95F! 
+    > type: git config --global user.signingkey <Key>! 
 ```
 
 
