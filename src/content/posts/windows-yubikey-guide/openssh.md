@@ -48,7 +48,7 @@ $keyPath = Join-Path $env:USERPROFILE '/.ssh/' $env:USERNAME
 $keySN = ykman info | Select-String "Serial number:"; $keySN = $keySN.Line.split();
 $keySN = $keySN[2]
 
-ssh-keygen -t ecdsa-sk -f $keyPath-$keySN-yubikey-master -O resident
+ssh-keygen -t ecdsa-sk -f $keyPath-yubikey-$keySN -O resident -C "yubikey-$keySN <$env:USERNAME>"
 ```
 
 If this is a new Key, Windows may ask you to setup a pin for the Yubikey.
