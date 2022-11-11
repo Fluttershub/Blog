@@ -8,6 +8,12 @@
           {{ partial "icon.html" (dict "ctx" $ "name" "calendar") }}
           {{ .PublishDate.Format "Jan 2, 2006" }}
         </div>
+        {{ if ne .Lastmod .Date }}
+        <div>
+          {{ partial "icon.html" (dict "ctx" $ "name" "git-commit") }}
+          Last Edited: {{ .Lastmod.Format "Jan 2, 2006" }}
+        </div>
+      {{ end }}
         {{ if not .Site.Params.noreadingtime }}
           <div>
             {{ partial "icon.html" (dict "ctx" $ "name" "clock") }}
