@@ -4,6 +4,7 @@ languageCode = "en-us"
 title = "Phoenix's Personal Blog"
 homepage = "https://fluttershub.com"
 tags = ["blog","personal","coding"]
+enableGitInfo = true
 
 [markup.goldmark.renderer]
 hardWraps = true
