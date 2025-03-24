@@ -1,4 +1,4 @@
-FROM jakejarvis/hugo-extended:0.124.1 AS hugo-builder
+FROM ghcr.io/peaceiris/hugo:v0.145.0-full AS hugo-builder
 COPY . /app
 WORKDIR /app
 RUN /usr/bin/hugo --minify --source=src/ --destination /app/build/
